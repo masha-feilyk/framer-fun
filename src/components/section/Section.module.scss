@@ -1,0 +1,23 @@
+.section {
+  padding: rem(120) rem(16);
+  background-color: lightgoldenrodyellow;
+
+  @include desktop {
+    padding: rem(144) rem(30);
+  }
+}
+
+.title {
+  font-size: rem(52);
+  line-height: lh(56,52);
+  color: #000000;
+  font-weight: 500;
+  text-transform: uppercase;
+  text-align: center;
+
+  @include desktop {
+    font-size: rem(144);
+    line-height: lh(130,144);
+    font-weight: 400;
+  }
+}

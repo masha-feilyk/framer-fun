@@ -1,0 +1,11 @@
+@function rem($px) {
+  @return $px / 16 * 1rem;
+}
+
+@function lh($line-height, $font-size) {
+  @return $line-height / $font-size;
+}
+
+@function percentage($width, $height) {
+  @return ($height * 100) / $width * 1%
+}

@@ -1,0 +1,26 @@
+.column {
+    position: relative;
+    max-width: 100%;
+    grid-column: auto/span var(--ui-xs, 1);
+    grid-column-start: var(--ui-start-xs, 0);
+    order: var(--ui-order-xs, 0);
+
+    @include mobile {
+        grid-column: auto/span var(--ui-sm, var(--ui-xs, 1));
+        grid-column-start: var(--ui-start-sm, var(--ui-start-xs, 0));
+        order: var(--ui-order-sm, var(--ui-order-xs, 0));
+    }
+
+    @include tablet {
+        // TODO uncomment when tablet version will be available
+        //grid-column: auto/span var(--ui-md, var(--ui-sm, var(--ui-xs, 1)));
+        //grid-column-start: var(--ui-start-md, var(--ui-start-sm, var(--ui-start-js, 0)));
+        //order: var(--ui-order-md, var(--ui-order-sm, var(--ui-order-xs, 0)));
+    }
+
+    @include desktop {
+        grid-column: auto/span var(--ui-lg, var(--ui-md, var(--ui-sm, var(--ui-xs, 1))));
+        grid-column-start: var(--ui-start-lg, var(--ui-start-md, var(--ui-start-sm, var(--ui-start-js, 0))));
+        order: var(--ui-order-lg, var(--ui-order-md, var(--ui-order-sm, var(--ui-order-xs, 0))));
+    }
+}
