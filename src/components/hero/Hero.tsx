@@ -1,3 +1,4 @@
+import { motion } from 'framer-motion'
 import Image from 'next/image'
 
 import { Col } from '../common/grid/Col'
@@ -23,6 +24,23 @@ export const Hero = () => {
           width={682}
           height={784}
           priority={true}
+        />
+      </Col>
+      <Col xs={8} lg={12}>
+        <motion.div
+          className={styles.animation}
+          animate={{
+            scale: [1, 2, 2, 1, 1],
+            rotate: [0, 0, 270, 270, 0],
+            borderRadius: ['20%', '20%', '50%', '50%', '20%']
+          }}
+          transition={{
+            duration: 2,
+            ease: 'easeInOut',
+            times: [0, 0.2, 0.5, 0.8, 1],
+            repeat: Infinity,
+            repeatDelay: 1
+          }}
         />
       </Col>
     </Grid>
